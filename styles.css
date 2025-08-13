@@ -1,5 +1,61 @@
-/*Field & Feast name*/
+/*Field & Feast by Roman Sanchez*/
+
+/*imported fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/*css rest*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+    */
+/* HTML5 display-role reset for older browsers */
+/*
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*/
+/*root variables*/
 :root{
 --midnight-blue: #1F2A44;
 --olive-green: #76885B;
@@ -8,4 +64,137 @@
 --dark-charcoal: #2B2B2B;
 --soft-white: #FAF9F6;
 --fonts: "Playfair Display", sans-serif;
+}
+
+/*global styles (mobile first/small)*/
+main{
+    font-family:var(--fonts);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+#Heading{
+    background: 200px var(--midnight-blue);
+    color: var(--soft-white);
+    margin: auto;
+    height: auto;
+    width: 100vw;
+}
+#Heading p{
+    font-style:italic;
+}
+nav{
+    background-color: var(--champagne-gold);
+    
+    width:100vw;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    margin: auto;
+}
+nav li{
+    
+    float: left;
+    list-style-type: none;
+}
+nav li a{
+    color: var(--dark-charcoal);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-weight: bold;
+}
+h2{
+    color: var(--midnight-blue);
+    font-weight:lighter;
+    text-align: left;
+}
+#About p{
+    width: 55vw;
+    text-align: left;
+}
+#Offerings{
+    display: flex;
+    align-content: center;
+    flex-direction:column;
+    text-align: left;
+    width: 55vw;
+}
+#Offerings div{
+    display: grid;
+    width: 75vw;
+    height:30vw;
+    grid-template-columns: 16vw 26vw 16vw;
+    grid-template-rows: 16vw 20vw 16vw ;
+    grid-template-areas:  "artisan exclusive basket" "artisan exclusive basket";
+    background-color: var(--olive-green);
+    color: var(--linen);
+    gap:3px;
+    margin: 5px;
+
+}
+#artisan{
+    grid-area: artisan;
+    text-align: center;
+    align-items: center;
+}
+#exclusive{
+    grid-area: exclusive;
+    text-align: center;
+}
+#basket{
+    grid-area:basket;
+    text-align: left;
+}
+#Gallery h2,p{
+    text-align:left;
+    width: 55vw;
+}
+#Gallery img{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+#Gallery img > p{
+    text-align:center;
+    font-style:italic;
+}
+footer{
+    background-color: var(--midnight-blue);
+    font-family:var(--fonts);
+     display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer p{
+    color: var(--linen);
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer a{
+    color: var(--champagne-gold);
+    text-decoration: none;
+}
+/*media query (medium)*/
+@media screen and (min-width: 300px)
+{
+    #Gallery img{
+        height:300px;
+        width: 300px;
+    }
+}
+/* media query (large)*/
+@media screen and (min-width: 600px){
+    #Gallery img{
+        height: 600px;
+        width: 600px;
+    }
 }
